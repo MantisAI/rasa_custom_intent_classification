@@ -1,0 +1,7 @@
+.envrc
+.idea/
+.vscode/
+/build
+/models
+/custom_model
+__pycache__/

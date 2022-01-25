@@ -1,0 +1,35 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+pipeline:
+   - name: sklearn_classifier.CustomIntentSVM
+     kernel: "linear"
+     coef0: 1
+     degree: 2
+     class_weight: "balanced"
+   #- name: transformer_classifier.TransformerClassifier
+   #  model_name: "albert-base-v2"
+   #  epochs: 10
+   #  batch_size: 20
+   #  learning_rate: 0.00002
+   #  warmup_steps: 500
+   #  weight_decay: 0.01
+   #  scheduler_type: "constant"
+   #  max_length: 64
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
