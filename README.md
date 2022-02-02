@@ -16,3 +16,14 @@ rasa init
 
 `config.yml` contains examples of how you would insert the two classifiers into the Rasa pipeline, and how you would pass parameters to them.
 
+# Running the project
+
+To train the custom rasa intent classification model:
+```rasa train nlu```
+
+To test the model:
+```rasa test nlu --nlu <path_to_test_data>```
+
+To interact with the model:
+```rasa shell```
+
